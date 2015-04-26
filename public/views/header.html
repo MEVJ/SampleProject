@@ -1,0 +1,47 @@
+<!--<div ng-controller="HeaderCtrl" class="header">
+	<ul class="nav nav-pills pull-right">
+		<li ui-sref-active="active">
+			<a ui-sref="main">Home</a>
+		</li>
+		<li ui-sref-active="active">
+			<a ui-sref="cart">Cart</a>
+		</li>
+		<li ng-hide="isAuthenticated()" ui-sref-active="active">
+			<a ui-sref="login">Login</a>
+		</li>
+		<li ng-show="isAuthenticated()" ui-sref-active="active">
+			<a ui-sref="logout">Logout</a>
+		</li>
+	</ul>
+	<h3 class="text-muted">MEAN-Commerce</h3>
+</div>-->
+<!-- Fixed navbar start -->
+<div ng-controller="HeaderCtrl"><img src="header.jpg">
+	<div class="container">
+		<div class="row">
+			<h3>Stock Trading</h3>
+			<div class="btn-group btn-group-justified" role="group" aria-label="...">
+				<div class="btn-group" role="group">
+					<button ui-sref="trade" type="button" class="btn btn-default" ui-sref-active="active">Trade Now</button>
+				</div>
+				<div class="btn-group" role="group">
+					<button ui-sref="snapshot" type="button" class="btn btn-default" ui-sref-active="active">Stock Snapshot</button>
+				</div>
+				<div class="btn-group" role="group">
+					<button ui-sref="holdings" type="button" class="btn btn-default" ui-sref-active="active">Holdings</button>
+				</div>
+				<div class="btn-group" role="group">
+					<button ui-sref="research" type="button" class="btn btn-default" ui-sref-active="active">Research</button>
+				</div>
+				<div class="btn-group" role="group">
+					<button ui-sref="portfolio" type="button" class="btn btn-default" ui-sref-active="active">Portfolio</button>
+				</div>
+				<div class="btn-group" role="group">
+					<button ui-sref="account" type="button" class="btn btn-default" ui-sref-active="active">Account Services</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+<!-- /.Fixed navbar  -->
