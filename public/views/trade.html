@@ -1,0 +1,146 @@
+<script type="text/javascript">
+	window.onLoad = function () {
+		init();
+	};
+
+	function init() {
+		var ctx = $("#myChart").get(0).getContext("2d");
+
+		var data = {
+			labels: ["January", "February", "March", "April", "May", "June", "July"],
+			datasets: [
+				{
+					fillColor: "rgba(220,220,220,0.5)",
+					strokeColor: "rgba(220,220,220,1)",
+					pointColor: "rgba(220,220,220,1)",
+					pointStrokeColor: "#fff",
+					data: [65, 59, 90, 81, 56, 55, 40]
+                        },
+				{
+					fillColor: "rgba(151,187,205,0.5)",
+					strokeColor: "rgba(151,187,205,1)",
+					pointColor: "rgba(151,187,205,1)",
+					pointStrokeColor: "#fff",
+					data: [28, 48, 40, 19, 96, 27, 100]
+                        }
+                    ]
+		}
+
+		var myNewChart = new Chart(ctx).Line(data);
+	}
+</script>
+<div class="container">
+	<div class="spacer10"></div>
+	<div class="row">
+		<div class="col-lg-8 col-md-8">
+
+			<div class="input-group">
+				<input type="text" class="form-control" placeholder="Search Stock using Code or Name">
+				<span class="input-group-btn">
+        					<button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span>
+				</button>
+				</span>
+			</div>
+
+		</div>
+		<div class="col-lg-4 col-md-4">
+
+			<div class="form-group">
+				<div class="col-md-8">
+					<select class="form-control">
+						<option>SG Market</option>
+						<option>HK Market</option>
+					</select>
+
+				</div>
+			</div>
+
+		</div>
+		<!--<div class="col-lg-3 col-md-3">
+			<div class="panel panel-default">
+				<div class="panel-heading">Markets</div>
+				<div class="panel-body">
+					<select class="form-control">
+						<option>SG</option>
+						<option>HK</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-3 col-md-3">
+			<div class="panel panel-default">
+				<div class="panel-heading">Securities Account</div>
+				<div class="panel-body">
+					<select class="form-control">
+						<option>XXXXXX6789</option>
+						<option>XXXXXX4567</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-3 col-md-3">
+			<div class="panel panel-default">
+				<div class="panel-heading">Settlement Account</div>
+				<div class="panel-body">
+					<select class="form-control">
+						<option>XXXXXX4579</option>
+						<option>XXXXXX3458</option>
+					</select>
+				</div>
+			</div>
+		</div>-->
+	</div>
+	<div class="spacer10"></div>
+	<div class="row">
+		<div class="col-lg-5 col-md-5">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<form>
+						<div class="form-group">
+							<label for="stockName">Stock Name</label>
+							<p class="form-control-static">Google Inc
+								<div class="btn-group" role="group" aria-label="BuySellButton">
+									<button type="button" class="btn btn-success btn-sm">Buy</button>
+									<button type="button" class="btn btn-danger btn-sm">Sell</button>
+								</div>
+							</p>
+						</div>
+
+						<div class="form-group">
+							<label for="exampleInputPassword1">Total Buying Prower</label>
+							<p class="form-control-static">SGD 10000.00</p>
+						</div>
+						<div class="form-group">
+							<label for="exampleInputPassword1">Quantity</label>
+							<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+						</div>
+						<div class="form-group">
+							<label for="exampleInputPassword1">Price</label>
+							<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+						</div>
+						<div class="form-group">
+							<label for="exampleInputPassword1">Type</label>
+							<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+						</div>
+						<button type="submit" class="btn btn-default">Submit</button>
+					</form>
+
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-7 col-md-7">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<section>
+						<article>
+							<canvas id="myChart" width="400" height="430">
+							</canvas>
+						</article>
+					</section>
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+</div>
